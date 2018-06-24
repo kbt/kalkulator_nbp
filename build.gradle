@@ -36,8 +36,17 @@ sourceSets {
     }
 }
 
-task buildWebapp(type:Exec) {
+task buildNodeModules(type:Exec) {
+    workingDir "$webappDir"
+    inputs.dir "$webappDir"
+
+    group = BasePlugin.BUILD_GROUP
+
     commandLine "npm", "install"
+}
+
+task buildWebapp(type:Exec) {
+    dependsOn "buildNodeModules"
     workingDir "$webappDir"
     inputs.dir "$webappDir"
 
