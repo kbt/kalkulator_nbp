@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>
+    Kalkulator wynagrodzeń.
+  </h1>
+
+  <form>
+    <fieldset>
+      <label for="country">Kraj</label>
+      <select [(ngModel)]="country" id="country" name="country">
+        <option *ngFor="let c of countries" [ngValue]="c">{{c.name}}</option>
+      </select>
+
+      <label for="amount">Stawka dzienna [<span *ngIf="country">{{ country.currency }}</span>]</label>
+      <input [(ngModel)]="amount" id="amount" name="amount"/>
+
+      <h3 class="float-right" [innerHTML]="message"></h3>
+
+      <button (click)="calculate()">Przelicz</button>
+    </fieldset>
+  </form>
+  <div>
+
+  </div>
+
+</div>

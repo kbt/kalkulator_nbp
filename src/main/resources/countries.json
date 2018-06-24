@@ -1,0 +1,23 @@
+[
+  {
+    "code": "UK",
+    "name": "Wielka Brytania",
+    "taxRate": 25,
+    "fixedCost": 600,
+    "currency": "GBP"
+  },
+  {
+    "code": "DE",
+    "name": "Niemcy",
+    "taxRate": 20,
+    "fixedCost": 800,
+    "currency": "EUR"
+  },
+  {
+    "code": "PL",
+    "name": "Polska",
+    "taxRate": 19,
+    "fixedCost": 1200,
+    "currency": "PLN"
+  }
+]
